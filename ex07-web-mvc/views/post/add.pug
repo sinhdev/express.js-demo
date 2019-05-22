@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+  h3= title
+  form(action = "/post/add", method = "POST")
+    table
+      tr
+         td 
+            label(for = "title") Title:
+         td
+            input(name = "title" value = "" placeholder="title")
+      tr
+         td 
+            label(for = "author") Author:
+         td 
+            input(name = "author" placeholder = "author")
+      tr
+         td
+            label(for = "body") Content:
+         td
+            textarea(name = "body" rows=7 placeholder="post body")
+      tr
+         td
+            label(for = "tags") tags:
+         td
+            input(name = "tags" placeholder = "tags")
+      tr
+        td(colspan=2)
+            button(type = "submit") Add Post

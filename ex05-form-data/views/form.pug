@@ -1,0 +1,14 @@
+extends layout
+
+block content
+   h1= title
+   form(action = "/form_data", method = "POST")
+      div
+         label(for = "say") Say:
+         input(name = "say" value = "Hi")
+      br
+      div
+         label(for = "to") To:
+         input(name = "to" value = "Express forms")
+      br
+      button(type = "submit") Send my greetings

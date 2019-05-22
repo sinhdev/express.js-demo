@@ -1,0 +1,10 @@
+{
+  "name": "s03-first-pug-template",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "express": "~4.16.1",
+    "pug": "^2.0.3"
+  }
+}
