@@ -1,7 +1,7 @@
 extends ../layout
 
 block content
-  h1= title
-  a(href=url) #{by}
-  p Welcome to #{title}
-  p= descrption
+  h1= post.title
+  a(href=post.url) #{post.by}
+  p Welcome to #{post.title}
+  p= post.descrption

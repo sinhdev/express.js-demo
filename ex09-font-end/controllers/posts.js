@@ -8,13 +8,13 @@ const request = require('request');
 //     port: 3001
 // };
 /* GET home page. */
-router.get('/id/:id', function (req, res, next) {
-    request('http://localhost:3001/posts/id/' + req.params.id, { json: true }, (err, response, post) => {
+router.get('/:id', function (req, res, next) {
+    request.get('http://localhost:3001/posts/id/' + req.params.id, { json: true }, (err, response, post) => {
         if (err) { return console.log(err); }
         console.log(post);
         res.render('./posts/post', post)
     });
-
+    
     // options.path = '/posts/id/' + req.params.id
     // var request = http.get(options, function (response) {
     //     console.log('STATUS: ' + response.statusCode);

@@ -5,19 +5,38 @@ var Post = require('../models/post')
 
 router.get('/title/:title', async function (req, res, next) {
     try {
-        var posts = await Post.findByTitle(req.params.title).exec()
-        res.send(posts)
+        res.json({
+            error: 0,
+            success: true,
+            message: 'todos retrieved successfully',
+            post: post
+        })
     } catch (error) {
-        res.status(500).send(error)
+        res.json({
+            error: 1,
+            success: false,
+            message: 'todos retrieved error',
+            error: error
+        })
     }
 });
 
 router.get('/id/:id', async (req, res, next) => {
     try {
         var post = await Post.findById(req.params.id).exec()
-        res.send(post)
+        res.json({
+            error: 0,
+            success: true,
+            message: 'todos retrieved successfully',
+            post: post
+        })
     } catch (error) {
-        res.status(500).send(error)
+        res.json({
+            error: 1,
+            success: false,
+            message: 'todos retrieved error',
+            error: error
+        })
     }
 });
 

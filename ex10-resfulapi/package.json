@@ -1,0 +1,22 @@
+{
+  "name": "ex10-resfulapi",
+  "version": "1.0.0",
+  "description": "restful api with express demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "restful",
+    "api",
+    "express",
+    "demo",
+    "restful",
+    "REST"
+  ],
+  "author": "sinhnx",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
