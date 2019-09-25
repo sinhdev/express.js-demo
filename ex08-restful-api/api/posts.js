@@ -8,14 +8,14 @@ router.get('/title/:title', async function (req, res, next) {
         res.json({
             error: 0,
             success: true,
-            message: 'todos retrieved successfully',
+            message: 'post retrieved successfully',
             post: post
         })
     } catch (error) {
         res.json({
             error: 1,
             success: false,
-            message: 'todos retrieved error',
+            message: 'post retrieved error',
             error: error
         })
     }
@@ -27,14 +27,14 @@ router.get('/id/:id', async (req, res, next) => {
         res.json({
             error: 0,
             success: true,
-            message: 'todos retrieved successfully',
+            message: 'post retrieved successfully',
             post: post
         })
     } catch (error) {
         res.json({
             error: 1,
             success: false,
-            message: 'todos retrieved error',
+            message: 'post retrieved error',
             error: error
         })
     }
